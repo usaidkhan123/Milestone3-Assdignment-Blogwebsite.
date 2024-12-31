@@ -1,4 +1,6 @@
 import "../globals.css";
+import svg1 from '@/public/images/social media.svg'
+import Image from "next/image";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
@@ -68,7 +70,7 @@ export default async function RootLayout({
     <html lang="en" className={`${inter.variable} bg-white text-black`}>
       <body>
         <section className="min-h-screen">
-          {isDraftMode && <AlertBanner />}
+          <AlertBanner />
           <main>{children}</main>
           <footer className="bg-accent-1 border-accent-2 border-t">
             <div className="container mx-auto px-5">
@@ -78,24 +80,79 @@ export default async function RootLayout({
                   value={footer as PortableTextBlock[]}
                 />
               ) : (
-                <div className="flex flex-col items-center py-28 lg:flex-row">
-                  <h3 className="mb-10 text-center text-4xl font-bold leading-tight tracking-tighter lg:mb-0 lg:w-1/2 lg:pr-4 lg:text-left lg:text-5xl">
-                    Built with Next.js.
-                  </h3>
-                  <div className="flex flex-col items-center justify-center lg:w-1/2 lg:flex-row lg:pl-4">
-                    <a
-                      href="https://nextjs.org/docs"
-                      className="mx-3 mb-6 border border-black bg-black py-3 px-12 font-bold text-white transition-colors duration-200 hover:bg-white hover:text-black lg:mb-0 lg:px-8"
-                    >
-                      Read Documentation
-                    </a>
-                    <a
-                      href="https://github.com/vercel/next.js/tree/canary/examples/cms-sanity"
-                      className="mx-3 font-bold hover:underline"
-                    >
-                      View on GitHub
-                    </a>
-                  </div>
+                <div className="">
+                  <div className="h-[173px] pt-[60px] lg:flex mt-20">
+        <p className=" ml-10 sm:ml-80 lg:ml-[100px] xl:ml-[150px] text-[24px] font-[Montserrat] leading-[32px] text-blue-900 font-bold">Blog.com</p>
+        <Image
+      src={svg1}
+      alt="company logo"
+        className="mt-8 ml-8 sm:ml-80 lg:ml-[600px] xl:ml-[850px] lg:-mt-[70px]"
+    />
+        </div>
+
+        <div>
+            <div className="lg:flex space-x-20 lg:space-x-3 xl:space-x-32">
+                <div className="sm:flex">
+            <div className="space-y-[10px] mt-10 ml-10 lg:ml-4 xl:ml-32">
+                <h1 className=" font-bold text-[16px] leading-[24px]">Company Info</h1>
+                <p className=" text-custom3 font-bold text-[14px] leading-[24px]">About Us</p>
+                <p className="text-custom3 font-bold text-[14px] leading-[24px]">Carrier</p>
+                <p  className="text-custom3 font-bold text-[14px] leading-[24px]">We are hiring</p>
+                <p className="text-custom3 font-bold text-[14px] leading-[24px]">Blog</p>
+            </div>
+
+            <div className="space-y-[10px] mt-10 ml-10">
+                <h1 className=" font-bold text-[16px] leading-[24px]">Legal</h1>
+                <p className=" text-custom3 font-bold text-[14px] leading-[24px]">About Us</p>
+                <p className="text-custom3 font-bold text-[14px] leading-[24px]">Carrier</p>
+                <p  className="text-custom3 font-bold text-[14px] leading-[24px]">We are hiring</p>
+                <p className="text-custom3 font-bold text-[14px] leading-[24px]">Blog</p>
+            </div>
+
+            <div className="space-y-[10px] mt-10 ml-10">
+                <h1 className=" font-bold text-[16px] leading-[24px]">Features</h1>
+                <p className=" text-custom3 font-bold text-[14px] leading-[24px]">About Us</p>
+                <p className="text-custom3 font-bold text-[14px] leading-[24px]">Carrier</p>
+                <p  className="text-custom3 font-bold text-[14px] leading-[24px]">We are hiring</p>
+                <p className="text-custom3 font-bold text-[14px] leading-[24px]">Blog</p>
+            </div>
+            
+
+            <div className="space-y-[10px] mt-10 ml-10">
+                <h1 className=" font-bold text-[16px] leading-[24px]">Resource</h1>
+                <p className=" text-custom3 font-bold text-[14px] leading-[24px]">About Us</p>
+                <p className="text-custom3 font-bold text-[14px] leading-[24px]">Carrier</p>
+                <p  className="text-custom3 font-bold text-[14px] leading-[24px]">We are hiring</p>
+                <p className="text-custom3 font-bold text-[14px] leading-[24px]">Blog</p>
+            </div>
+             
+            <div className="space-y-[10px] mt-10 ml-10">
+                <h1 className=" font-bold text-[16px] leading-[24px]">Company Info</h1>
+                <p className=" text-custom3 font-bold text-[14px] leading-[24px]">About Us</p>
+                <p className="text-custom3 font-bold text-[14px] leading-[24px]">Carrier</p>
+                <p  className="text-custom3 font-bold text-[14px] leading-[24px]">We are hiring</p>
+                <p className="text-custom3 font-bold text-[14px] leading-[24px]">Blog</p>
+            </div>
+            </div>
+            <div className="mt-10 ">
+            <h1 className=" font-bold text-[16px] leading-[24px]">Get In Touch</h1>
+            <div className="flex mt-4">
+            <div className="bg-slate-100 text-custom3 pt-[15px] text-[14px] leading-[28px] text-center h-[58px] rounded-[5px] w-[204px] ">Your Email</div>
+            <button className="bg-blue-900 text-[14px] text-white leading-[28px] w-[120px] rounded-[5px]"> Subscribe</button>
+            </div>
+            </div>
+</div>
+            <div className="mt-4">
+            {/* <Image
+      src={svg2}
+      alt="company logo"
+        className="md:hidden"
+    /> */}
+            </div>
+            <div className=" h-[74px] text-center pt-6 font-bold max-sm:hidden">
+                <p className="text-blue-900">Made By Muhammad Usaid Khan All Right Reserved</p>
+            </div>
+        </div>
                 </div>
               )}
             </div>
