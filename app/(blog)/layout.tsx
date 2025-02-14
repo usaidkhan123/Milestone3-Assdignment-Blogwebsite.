@@ -1,6 +1,7 @@
 import "../globals.css";
 import svg1 from '@/public/images/social media.svg'
 import Image from "next/image";
+import CommentSection from "./commentsection/page";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
@@ -160,7 +161,8 @@ export default async function RootLayout({
         </section>
         {isDraftMode && <VisualEditing />}
         <SpeedInsights />
-      </body>
+                <CommentSection></CommentSection>
+     </body>
     </html>
   );
 }
